@@ -1,0 +1,310 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "9.6.0",
+        "pyPiVersion" : "2.1.17"
+      },
+      "sparkConfigJinjaEnabled" : true,
+      "workflowMode" : "batch"
+    },
+    "id" : "1",
+    "uri" : "pipelines/p1",
+    "pipelineSettingsInfo" : {
+      "applicationName" : "p1",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "36951",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "gayushprophecyioteam.testhsbc.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "p1",
+    "configTopLevelPackage" : "p1",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "TU4t83ntg7jErYfk0S2ZO",
+    "source" : "fxNJdHK35lwLwZn0fQyWB$$85OPg19Kj9tFZUIbZGrDB",
+    "sourcePort" : "oaoR55LY6gw0B4o2zeMbo$$HsUKt-OUZxbop6CB6CZBr",
+    "target" : "4pgen15XfmkzpA2Gb_o7i$$R1H83DVKS0bru9UWLknfe",
+    "targetPort" : "B6BqmXInnainvNaiKF3ln$$wjm1WJQEUFw4yaKHVIdFp"
+  }, {
+    "id" : "i5qqZcSaDRevwJ45S2KuE",
+    "source" : "4pgen15XfmkzpA2Gb_o7i$$R1H83DVKS0bru9UWLknfe",
+    "sourcePort" : "X87JcYvAXIYlKF3X7KPJG$$ibgXfgO_z1zKkMAlt0JQN",
+    "target" : "bh9Nii2COyL1g5PkAh3Cg$$StXtVDvhCuDltqOBlUJZX",
+    "targetPort" : "_Yf3PDsWC6wU7QcKLMDo7$$KlNmHXkx0BJ43A0ii_aWJ"
+  } ],
+  "processes" : {
+    "fxNJdHK35lwLwZn0fQyWB$$85OPg19Kj9tFZUIbZGrDB" : {
+      "id" : "fxNJdHK35lwLwZn0fQyWB$$85OPg19Kj9tFZUIbZGrDB",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "seed1",
+        "slug" : "seed1",
+        "x" : -500,
+        "y" : -160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "oaoR55LY6gw0B4o2zeMbo$$HsUKt-OUZxbop6CB6CZBr",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/seed1"
+      }
+    },
+    "4pgen15XfmkzpA2Gb_o7i$$R1H83DVKS0bru9UWLknfe" : {
+      "id" : "4pgen15XfmkzpA2Gb_o7i$$R1H83DVKS0bru9UWLknfe",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "select_and_append_dummy_column",
+        "slug" : "select_and_append_dummy_column",
+        "x" : -180,
+        "y" : -240,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Adds a fixed dummy column to each row alongside existing fields.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false,
+        "showRecordsCount" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "B6BqmXInnainvNaiKF3ln$$wjm1WJQEUFw4yaKHVIdFp",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "col1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "First column value stored as text",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "col2",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Second column value stored as text",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "col3",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Third column value stored as text",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "X87JcYvAXIYlKF3X7KPJG$$ibgXfgO_z1zKkMAlt0JQN",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "col1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "col1"
+          },
+          "description" : ""
+        }, {
+          "target" : "col2",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "col2"
+          },
+          "description" : ""
+        }, {
+          "target" : "col3",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "col3"
+          },
+          "description" : ""
+        }, {
+          "target" : "col4",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "'dummy'"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "B6BqmXInnainvNaiKF3ln$$wjm1WJQEUFw4yaKHVIdFp##col3", "B6BqmXInnainvNaiKF3ln$$wjm1WJQEUFw4yaKHVIdFp##col2", "B6BqmXInnainvNaiKF3ln$$wjm1WJQEUFw4yaKHVIdFp##col1" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.57&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "bh9Nii2COyL1g5PkAh3Cg$$StXtVDvhCuDltqOBlUJZX" : {
+      "id" : "bh9Nii2COyL1g5PkAh3Cg$$StXtVDvhCuDltqOBlUJZX",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "tgt",
+        "slug" : "tgt",
+        "x" : 140,
+        "y" : -320,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Exports customer data to a CSV file for external sharing and archival.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "_Yf3PDsWC6wU7QcKLMDo7$$KlNmHXkx0BJ43A0ii_aWJ",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "col1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "First column value stored as text",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "col2",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Second column value stored as text",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "col3",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Third column value stored as text",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "col4",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/tgt"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

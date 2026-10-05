@@ -1,0 +1,25 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: col1
+    type: string
+    nullable: true
+    metadata:
+      description: First column value stored as text
+      mappings: []
+      tags: []
+  - name: col2
+    type: string
+    nullable: true
+    metadata:
+      description: Second column value stored as text
+      mappings: []
+      tags: []
+  - name: col3
+    type: string
+    nullable: true
+    metadata:
+      description: Third column value stored as text
+      mappings: []
+      tags: []
