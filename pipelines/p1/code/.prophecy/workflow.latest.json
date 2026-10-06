@@ -98,25 +98,66 @@
     "sourcePort" : "X87JcYvAXIYlKF3X7KPJG$$ibgXfgO_z1zKkMAlt0JQN",
     "target" : "bh9Nii2COyL1g5PkAh3Cg$$StXtVDvhCuDltqOBlUJZX",
     "targetPort" : "_Yf3PDsWC6wU7QcKLMDo7$$KlNmHXkx0BJ43A0ii_aWJ"
+  }, {
+    "id" : "-5jeEPwW9qx89uwjXz2gO",
+    "source" : "fxNJdHK35lwLwZn0fQyWB$$85OPg19Kj9tFZUIbZGrDB",
+    "sourcePort" : "oaoR55LY6gw0B4o2zeMbo$$HsUKt-OUZxbop6CB6CZBr",
+    "target" : "4wzkPVuPZ1a54hTWdd41o$$vxuwTQQrge1jHmUQqrQzl",
+    "targetPort" : "_ozIRWJrnx7oPjQTfUFXd$$RBrMsZxci8_9vaP0ylQT0"
   } ],
   "processes" : {
-    "fxNJdHK35lwLwZn0fQyWB$$85OPg19Kj9tFZUIbZGrDB" : {
-      "id" : "fxNJdHK35lwLwZn0fQyWB$$85OPg19Kj9tFZUIbZGrDB",
-      "component" : "Source",
+    "4wzkPVuPZ1a54hTWdd41o$$vxuwTQQrge1jHmUQqrQzl" : {
+      "id" : "4wzkPVuPZ1a54hTWdd41o$$vxuwTQQrge1jHmUQqrQzl",
+      "component" : "Reformat",
       "metadata" : {
-        "label" : "seed1",
-        "slug" : "seed1",
-        "x" : -500,
-        "y" : -160,
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : -20,
+        "y" : -460,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false
       },
       "ports" : {
-        "inputs" : [ ],
+        "inputs" : [ {
+          "id" : "_ozIRWJrnx7oPjQTfUFXd$$RBrMsZxci8_9vaP0ylQT0",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "col1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "First column value stored as text",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "col2",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Second column value stored as text",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "col3",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Third column value stored as text",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
         "outputs" : [ {
-          "id" : "oaoR55LY6gw0B4o2zeMbo$$HsUKt-OUZxbop6CB6CZBr",
+          "id" : "AWYTIK21nOqGT5kwyBkPe$$B62zqLe8AG9HQ-ccmXK82",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -124,7 +165,15 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "datasetId" : "datasets/seed1"
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.57&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
       }
     },
     "4pgen15XfmkzpA2Gb_o7i$$R1H83DVKS0bru9UWLknfe" : {
@@ -227,6 +276,33 @@
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.57&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "fxNJdHK35lwLwZn0fQyWB$$85OPg19Kj9tFZUIbZGrDB" : {
+      "id" : "fxNJdHK35lwLwZn0fQyWB$$85OPg19Kj9tFZUIbZGrDB",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "seed1",
+        "slug" : "seed1",
+        "x" : -500,
+        "y" : -160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "oaoR55LY6gw0B4o2zeMbo$$HsUKt-OUZxbop6CB6CZBr",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/seed1"
       }
     },
     "bh9Nii2COyL1g5PkAh3Cg$$StXtVDvhCuDltqOBlUJZX" : {

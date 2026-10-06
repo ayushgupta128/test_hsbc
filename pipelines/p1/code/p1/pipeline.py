@@ -8,6 +8,7 @@ from p1.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_seed1 = seed1(spark)
+    df_Reformat_1 = Reformat_1(spark, df_seed1)
     df_select_and_append_dummy_column = select_and_append_dummy_column(spark, df_seed1)
     tgt(spark, df_select_and_append_dummy_column)
 
