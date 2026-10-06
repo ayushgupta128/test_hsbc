@@ -112,12 +112,14 @@
       "metadata" : {
         "label" : "Reformat_1",
         "slug" : "Reformat_1",
-        "x" : -20,
-        "y" : -460,
+        "x" : -420,
+        "y" : -640,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "dataPreview" : false,
+        "showRecordsCount" : false
       },
       "ports" : {
         "inputs" : [ {
@@ -188,7 +190,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Adds a fixed dummy column to each row alongside existing fields.",
+        "comment" : "Adds a constant column to each row to enhance downstream labeling or testing.",
         "autoUpdateComment" : true,
         "dataPreview" : false,
         "showRecordsCount" : false
@@ -265,13 +267,13 @@
           "target" : "col4",
           "expression" : {
             "format" : "sql",
-            "expression" : "'dummy'"
+            "expression" : "'dumswmy'"
           },
           "description" : ""
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "B6BqmXInnainvNaiKF3ln$$wjm1WJQEUFw4yaKHVIdFp##col3", "B6BqmXInnainvNaiKF3ln$$wjm1WJQEUFw4yaKHVIdFp##col2", "B6BqmXInnainvNaiKF3ln$$wjm1WJQEUFw4yaKHVIdFp##col1" ]
+        "columnsSelector" : [ "B6BqmXInnainvNaiKF3ln$$wjm1WJQEUFw4yaKHVIdFp##col1", "B6BqmXInnainvNaiKF3ln$$wjm1WJQEUFw4yaKHVIdFp##col3", "B6BqmXInnainvNaiKF3ln$$wjm1WJQEUFw4yaKHVIdFp##col2" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.57&projectSubscriptionProjectId=12654&path=gems/Reformat",
