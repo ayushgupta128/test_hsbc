@@ -190,7 +190,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Adds a constant column to each row to enhance downstream labeling or testing.",
+        "comment" : "Adds a constant indicator column while selecting key fields to enrich customer data.",
         "autoUpdateComment" : true,
         "dataPreview" : false,
         "showRecordsCount" : false
@@ -267,13 +267,13 @@
           "target" : "col4",
           "expression" : {
             "format" : "sql",
-            "expression" : "'dumswmy'"
+            "expression" : "'dumsjwmy'"
           },
           "description" : ""
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "B6BqmXInnainvNaiKF3ln$$wjm1WJQEUFw4yaKHVIdFp##col1", "B6BqmXInnainvNaiKF3ln$$wjm1WJQEUFw4yaKHVIdFp##col3", "B6BqmXInnainvNaiKF3ln$$wjm1WJQEUFw4yaKHVIdFp##col2" ]
+        "columnsSelector" : [ "B6BqmXInnainvNaiKF3ln$$wjm1WJQEUFw4yaKHVIdFp##col2", "B6BqmXInnainvNaiKF3ln$$wjm1WJQEUFw4yaKHVIdFp##col3", "B6BqmXInnainvNaiKF3ln$$wjm1WJQEUFw4yaKHVIdFp##col1" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.57&projectSubscriptionProjectId=12654&path=gems/Reformat",
