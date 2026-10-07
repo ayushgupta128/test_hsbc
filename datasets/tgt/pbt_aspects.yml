@@ -23,7 +23,7 @@ schema:
       description: Third column value stored as text
       mappings: []
       tags: []
-  - name: col4
+  - name: col48
     type: string
     nullable: false
     metadata:

@@ -26,6 +26,20 @@ pipelines:
       - datasets/tgt
     subgraphs: []
     dependencies: {}
+  pipelines/p2:
+    name: p2
+    description: ''
+    author: g.ayush@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2026-10-07 07:33:25'
+    datasets:
+      inputs:
+      - datasets/seed1
+      outputs: []
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/seed1:
     name: seed1

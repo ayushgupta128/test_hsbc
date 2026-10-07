@@ -1,0 +1,158 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "9.6.0",
+        "pyPiVersion" : "2.1.17"
+      },
+      "sparkConfigJinjaEnabled" : true,
+      "workflowMode" : "batch"
+    },
+    "id" : "1",
+    "uri" : "pipelines/p2",
+    "sourceSuggestions" : [ {
+      "sourceLabel" : "tgt",
+      "sourceDatasetId" : "datasets/tgt",
+      "canJoinWith" : [ {
+        "processLabel" : "seed1",
+        "processId" : "bSh0P-azaEk8-wTtFidtu$$Pc3tQpHP1QYMCkTHbZPCh",
+        "joinColumns" : [ "col1", "col2", "col3" ],
+        "isRecommended" : true,
+        "properties" : {
+          "columnsSelector" : [ "col1", "col2", "col3" ],
+          "conditions" : [ {
+            "alias" : "tgt",
+            "expression" : "(((seed1.col1 = tgt.col1) AND (seed1.col2 = tgt.col2)) AND (seed1.col3 = tgt.col3))",
+            "joinType" : "inner"
+          } ],
+          "expressions" : [ {
+            "alias" : "col48",
+            "expression" : "tgt.col48"
+          }, {
+            "alias" : "col1",
+            "expression" : "seed1.col1"
+          }, {
+            "alias" : "col2",
+            "expression" : "seed1.col2"
+          }, {
+            "alias" : "col3",
+            "expression" : "seed1.col3"
+          } ],
+          "headAlias" : "datasets/tgt"
+        }
+      } ]
+    } ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "p2",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "37820",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "gayushprophecyioteam.testhsbc.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "p2",
+    "configTopLevelPackage" : "p2",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ ],
+  "processes" : {
+    "bSh0P-azaEk8-wTtFidtu$$Pc3tQpHP1QYMCkTHbZPCh" : {
+      "id" : "bSh0P-azaEk8-wTtFidtu$$Pc3tQpHP1QYMCkTHbZPCh",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "seed1",
+        "slug" : "seed1",
+        "x" : -560,
+        "y" : -280,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "ypy_Oqr6vSekuKoVlRjCw$$5zF8xu8nO_LWRymzxFgwq",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/seed1"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

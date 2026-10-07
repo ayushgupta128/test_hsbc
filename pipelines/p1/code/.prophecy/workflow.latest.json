@@ -112,7 +112,7 @@
       "metadata" : {
         "label" : "Reformat_1",
         "slug" : "Reformat_1",
-        "x" : -420,
+        "x" : -40,
         "y" : -640,
         "phase" : 0,
         "cache" : false,
@@ -190,7 +190,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Adds a constant indicator column while selecting key fields to enrich customer data.",
+        "comment" : "Adds a fixed placeholder column to each row for downstream compatibility or testing purposes.",
         "autoUpdateComment" : true,
         "dataPreview" : false,
         "showRecordsCount" : false
@@ -264,7 +264,7 @@
           },
           "description" : ""
         }, {
-          "target" : "col4",
+          "target" : "col48",
           "expression" : {
             "format" : "sql",
             "expression" : "'dumsjwmy'"
@@ -356,7 +356,7 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "col4",
+              "name" : "col48",
               "type" : "string",
               "nullable" : false,
               "metadata" : {
