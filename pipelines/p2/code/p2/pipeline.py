@@ -8,6 +8,7 @@ from p2.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_seed1 = seed1(spark)
+    df_extract_config_value = extract_config_value(spark, df_seed1)
 
 def main():
     spark = SparkSession.builder.enableHiveSupport().appName("p2").getOrCreate()

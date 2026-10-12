@@ -12,42 +12,12 @@
         "pyPiVersion" : "2.1.17"
       },
       "sparkConfigJinjaEnabled" : true,
+      "projectConfigurationEnabled" : true,
       "workflowMode" : "batch"
     },
     "id" : "1",
     "uri" : "pipelines/p2",
-    "sourceSuggestions" : [ {
-      "sourceLabel" : "tgt",
-      "sourceDatasetId" : "datasets/tgt",
-      "canJoinWith" : [ {
-        "processLabel" : "seed1",
-        "processId" : "bSh0P-azaEk8-wTtFidtu$$Pc3tQpHP1QYMCkTHbZPCh",
-        "joinColumns" : [ "col1", "col2", "col3" ],
-        "isRecommended" : true,
-        "properties" : {
-          "columnsSelector" : [ "col1", "col2", "col3" ],
-          "conditions" : [ {
-            "alias" : "tgt",
-            "expression" : "(((seed1.col1 = tgt.col1) AND (seed1.col2 = tgt.col2)) AND (seed1.col3 = tgt.col3))",
-            "joinType" : "inner"
-          } ],
-          "expressions" : [ {
-            "alias" : "col48",
-            "expression" : "tgt.col48"
-          }, {
-            "alias" : "col1",
-            "expression" : "seed1.col1"
-          }, {
-            "alias" : "col2",
-            "expression" : "seed1.col2"
-          }, {
-            "alias" : "col3",
-            "expression" : "seed1.col3"
-          } ],
-          "headAlias" : "datasets/tgt"
-        }
-      } ]
-    } ],
+    "sourceSuggestions" : [ ],
     "pipelineSettingsInfo" : {
       "applicationName" : "p2",
       "hasApplication" : true,
@@ -74,7 +44,35 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "yubikjn",
+          "kind" : {
+            "type" : "string",
+            "value" : "yubk"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "bhk",
+          "kind" : {
+            "type" : "string",
+            "value" : "vubjh"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "bij",
+          "kind" : {
+            "type" : "string",
+            "value" : "bhikj"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -84,7 +82,25 @@
       "instances" : { },
       "selected" : "default",
       "nonEditable" : [ ],
-      "isSubscribedPipelineWithPipelineConfigs" : false
+      "isSubscribedPipelineWithPipelineConfigs" : false,
+      "projectConfig" : {
+        "common" : {
+          "type" : "record",
+          "fields" : [ {
+            "name" : "yubikjn",
+            "kind" : {
+              "type" : "string",
+              "value" : "yubk"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          } ]
+        },
+        "instances" : {
+          "default" : { }
+        }
+      }
     },
     "sparkConf" : [ {
       "name" : "spark.default.parallelism",
@@ -118,7 +134,13 @@
     "configTopLevelPackage" : "p2",
     "configurationVersion" : "v2"
   },
-  "connections" : [ ],
+  "connections" : [ {
+    "id" : "ohmTN7SU4NSFszdXS5f3y$$cjLYw77PJI_0BO1Z4pxKO",
+    "source" : "bSh0P-azaEk8-wTtFidtu$$Pc3tQpHP1QYMCkTHbZPCh",
+    "sourcePort" : "ypy_Oqr6vSekuKoVlRjCw$$5zF8xu8nO_LWRymzxFgwq",
+    "target" : "pvMvqy16LHUEHY86mh3Hn$$DKmp-T6tZIbyhfeBx-nyE",
+    "targetPort" : "zqVxbvMAm_4WObUnO04GU$$gPMW-GXXM9IbHJTaUKpJw"
+  } ],
   "processes" : {
     "bSh0P-azaEk8-wTtFidtu$$Pc3tQpHP1QYMCkTHbZPCh" : {
       "id" : "bSh0P-azaEk8-wTtFidtu$$Pc3tQpHP1QYMCkTHbZPCh",
@@ -126,8 +148,8 @@
       "metadata" : {
         "label" : "seed1",
         "slug" : "seed1",
-        "x" : -560,
-        "y" : -280,
+        "x" : -860,
+        "y" : -380,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -145,6 +167,94 @@
       },
       "properties" : {
         "datasetId" : "datasets/seed1"
+      }
+    },
+    "pvMvqy16LHUEHY86mh3Hn$$DKmp-T6tZIbyhfeBx-nyE" : {
+      "id" : "pvMvqy16LHUEHY86mh3Hn$$DKmp-T6tZIbyhfeBx-nyE",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "extract_config_value",
+        "slug" : "extract_config_value",
+        "x" : -660,
+        "y" : -460,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Extracts key configuration values for downstream decision making.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false,
+        "showRecordsCount" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "zqVxbvMAm_4WObUnO04GU$$gPMW-GXXM9IbHJTaUKpJw",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "col1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "First column value stored as text",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "col2",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Second column value stored as text",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "col3",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Third column value stored as text",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "-8GIsVO0Sux677MkwjFdP$$r0OWXaZnWPedt0QEntVL1",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "cfvgh",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "'$bij'"
+          },
+          "description" : ""
+        }, {
+          "target" : "rvfcd",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "'$yubikjn'"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.57&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
       }
     }
   },

@@ -124,7 +124,12 @@ projectDependencies:
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}
-projectConfigurations: {}
+projectConfigurations:
+  projectConfigurations/config:
+    name: config
+    description: null
+    author: g.ayush@prophecy.io
+    createdAt: '2026-10-12 09:40:35'
 dbtDependencies:
 - packageName: dbt-labs/dbt_utils
   version: 1.3.3

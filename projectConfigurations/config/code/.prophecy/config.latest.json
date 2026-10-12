@@ -1,0 +1,18 @@
+{
+  "common" : {
+    "type" : "record",
+    "fields" : [ {
+      "name" : "yubikjn",
+      "kind" : {
+        "type" : "string",
+        "value" : "yubk"
+      },
+      "optional" : false,
+      "isWorkflowNodeConfiguration" : false,
+      "isReferenced" : false
+    } ]
+  },
+  "instances" : {
+    "default" : { }
+  }
+}
