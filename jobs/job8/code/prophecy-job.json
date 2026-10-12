@@ -1,0 +1,109 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "36611",
+    "jobId" : "jobs/job8",
+    "name" : "job8",
+    "schedule" : "None",
+    "scheduleTimeZone" : "UTC",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : false,
+    "defaultClusterSize" : "small",
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false,
+      "onDurationWarningThresholdExceeded" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false,
+        "onDurationWarningThresholdExceeded" : false
+      },
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false,
+      "onDurationWarningThresholdExceeded" : false
+    }
+  },
+  "processes" : {
+    "mPfk-ozqD4onYfZSnyCLo$$zo-kvh6l5FNXPr5uzs56D" : {
+      "id" : "mPfk-ozqD4onYfZSnyCLo$$zo-kvh6l5FNXPr5uzs56D",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "p1",
+        "slug" : "p1",
+        "x" : -560,
+        "y" : -280
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "RHtLjeOSjizGQ865DjEF6$$Et9FyLyiFrhK6Mpcf6c9I",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "CVQCQca6BRqRgSuW29FuR$$HGcehvqTY2FFpjMZ0xqho",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false,
+          "onDurationWarningThresholdExceeded" : false
+        },
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false,
+        "onDurationWarningThresholdExceeded" : false
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/p1",
+        "configurations" : {
+          "selectedInstance" : "default",
+          "selectedProjectInstance" : "default",
+          "projectInstances" : [ "default" ],
+          "instances" : {
+            "testHsbc" : [ "default" ]
+          },
+          "overrides" : { },
+          "schema" : [ {
+            "name" : "yubikjn",
+            "isProjectConfig" : true,
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "yubk"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          } ]
+        },
+        "projectId" : "262459"
+      },
+      "conditional" : {
+        "runIf" : "ALL_SUCCESS",
+        "forEach" : false,
+        "forEachConfig" : "",
+        "forEachConcurrency" : 1,
+        "forEachInputVariable" : "",
+        "forEachIterationCount" : null
+      },
+      "parent" : null
+    }
+  },
+  "connections" : [ ]
+}

@@ -12,6 +12,7 @@
         "pyPiVersion" : "2.1.17"
       },
       "sparkConfigJinjaEnabled" : true,
+      "projectConfigurationEnabled" : true,
       "workflowMode" : "batch"
     },
     "id" : "1",
@@ -42,7 +43,17 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "yubikjn",
+          "kind" : {
+            "type" : "string",
+            "value" : "yubk"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        } ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -52,7 +63,27 @@
       "instances" : { },
       "selected" : "default",
       "nonEditable" : [ ],
-      "isSubscribedPipelineWithPipelineConfigs" : false
+      "isSubscribedPipelineWithPipelineConfigs" : false,
+      "projectConfig" : {
+        "common" : {
+          "type" : "record",
+          "fields" : [ {
+            "name" : "yubikjn",
+            "kind" : {
+              "type" : "string",
+              "value" : "yubk"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          } ]
+        },
+        "instances" : {
+          "default" : {
+            "yubikjn" : "yubk"
+          }
+        }
+      }
     },
     "sparkConf" : [ {
       "name" : "spark.default.parallelism",

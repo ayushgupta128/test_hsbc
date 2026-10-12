@@ -98,7 +98,9 @@
           } ]
         },
         "instances" : {
-          "default" : { }
+          "default" : {
+            "yubikjn" : "yubk"
+          }
         }
       }
     },
