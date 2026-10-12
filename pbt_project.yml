@@ -90,7 +90,7 @@ jobs:
       clusterMode:
         Single: {}
       clusterId: null
-    enabled: null
+    enabled: true
     createdAt: '2026-10-12 12:55:19'
     author: g.ayush@prophecy.io
     models: []
