@@ -26,7 +26,7 @@
           "spark.prophecy.metadata.is.interactive.run" : "false",
           "spark.prophecy.project.id" : "__PROJECT_ID_PLACEHOLDER__",
           "spark.prophecy.metadata.user.id" : "9928",
-          "spark.prophecy.tasks" : "H4sIAAAAAAAAAKtWKjBUslJSqgUAIJW6mgkAAAA=",
+          "spark.prophecy.tasks" : "H4sIAAAAAAAAAKtWKjBUslIqyCxIzcnMSy3WB3JrAclKmpQVAAAA",
           "spark.prophecy.metadata.job.branch" : "__PROJECT_RELEASE_VERSION_PLACEHOLDER__",
           "spark.prophecy.metadata.url" : "__PROPHECY_URL_PLACEHOLDER__",
           "spark.prophecy.execution.metrics.disabled" : "false",
