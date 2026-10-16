@@ -85,7 +85,7 @@ jobs:
       onSuccess: false
       onFailure: false
     pipelines:
-    - pipelines/p1
+    - pipelines/p2
     jobClusterMode:
       clusterMode:
         Single: {}

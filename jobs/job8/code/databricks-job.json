@@ -2,12 +2,12 @@
   "fabric_id" : "36611",
   "components" : [ {
     "PipelineComponent" : {
-      "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/p1-1.0-py3-none-any.whl",
+      "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/p2-1.0-py3-none-any.whl",
       "nodeName" : "p1",
       "id" : "mPfk-ozqD4onYfZSnyCLo$$zo-kvh6l5FNXPr5uzs56D",
       "language" : "python",
       "projectConfigPath" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/configurations",
-      "pipelineId" : "pipelines/p1"
+      "pipelineId" : "pipelines/p2"
     }
   } ],
   "request" : {
@@ -53,7 +53,7 @@
       "task_key" : "p1",
       "job_cluster_key" : "job8_default_small",
       "python_wheel_task" : {
-        "package_name" : "p1",
+        "package_name" : "p2",
         "entry_point" : "main",
         "parameters" : [ "-i", "default", "-pi", "default", "-pc", "/dbfs/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/configurations", "-O", "{}" ]
       },
@@ -64,7 +64,7 @@
       }, {
         "whl" : "s3://dev-user-events/prophecy_libs-2.1.17-py3-none-any.whl"
       }, {
-        "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/p1-1.0-py3-none-any.whl"
+        "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/p2-1.0-py3-none-any.whl"
       } ],
       "email_notifications" : { },
       "max_retries" : 0,

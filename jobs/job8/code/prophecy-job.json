@@ -42,8 +42,8 @@
       "metadata" : {
         "label" : "p1",
         "slug" : "p1",
-        "x" : -560,
-        "y" : -280
+        "x" : -780,
+        "y" : -420
       },
       "ports" : {
         "inputs" : [ {
@@ -71,7 +71,7 @@
         "onDurationWarningThresholdExceeded" : false
       },
       "properties" : {
-        "pipelineId" : "pipelines/p1",
+        "pipelineId" : "pipelines/p2",
         "configurations" : {
           "selectedInstance" : "default",
           "selectedProjectInstance" : "default",
@@ -87,6 +87,24 @@
             "kind" : {
               "type" : "string",
               "value" : "yubk"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "bhk",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "vubjh"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "bij",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "bhikj"
             },
             "isReferenced" : false,
             "isWorkflowNodeConfiguration" : false
